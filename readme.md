@@ -16,8 +16,8 @@ Web Application that simulates being the portal of an Adidas Store 🛍️
 
 ## **General info**
 
-**Date**: October, 2019
-**Duration**: 2 Days.
+**Date**: October, 2019  
+**Duration**: 2 Days.  
 
 It was an exercise to practice **GRID** from **CSS** using the basics to paint a responsive design website without external libraries. I have used to practice CSS.
 
@@ -28,9 +28,9 @@ It was an exercise to practice **GRID** from **CSS** using the basics to paint a
 
 ## **Technologies**
 
-* [HTML]
-* [CSS]
-* [JS] (*Just a little*)
+* **Html**
+* **Css**
+* **JavaScript**&nbsp;&nbsp;*(Just a little)*
 
 ## **Setup**
 

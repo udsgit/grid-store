@@ -23,7 +23,7 @@ It was an exercise to practice **GRID** from **CSS** using the basics to paint a
 
 ## **Screenshots**
 
-> [![Screenshot](imagenes/readme/example.png)](https://udsgit.github.io/grid-store)
+> ![Screenshot](imagenes/readme/example.png)
 > *Website example.*
 
 ## **Technologies**

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio Grid Avanzado</title>
+  <script>
+    function hombre() {
+      document.querySelector('.hombre').style.display = 'grid';
+      document.querySelector('.mujer').style.display = 'none';
+      document.querySelector('.ninos').style.display = 'none';
+      document.querySelector('.deportes').style.display = 'none';
+      document.querySelector('.marcas').style.display = 'none';
+      document.querySelector('.colecciones').style.display = 'none';
+      document.querySelector('.noticias').style.display = 'none';
+    }
+    function mujer() {
+      document.querySelector('.hombre').style.display = 'none';
+      document.querySelector('.mujer').style.display = 'grid';
+      document.querySelector('.ninos').style.display = 'none';
+      document.querySelector('.deportes').style.display = 'none';
+      document.querySelector('.marcas').style.display = 'none';
+      document.querySelector('.colecciones').style.display = 'none';
+      document.querySelector('.noticias').style.display = 'none';
+    }
+    function ninos() {
+      document.querySelector('.hombre').style.display = 'none';
+      document.querySelector('.mujer').style.display = 'none';
+      document.querySelector('.ninos').style.display = 'grid';
+      document.querySelector('.deportes').style.display = 'none';
+      document.querySelector('.marcas').style.display = 'none';
+      document.querySelector('.colecciones').style.display = 'none';
+      document.querySelector('.noticias').style.display = 'none';
+    }
+    function deportes() {
+      document.querySelector('.hombre').style.display = 'none';
+      document.querySelector('.mujer').style.display = 'none';
+      document.querySelector('.ninos').style.display = 'none';
+      document.querySelector('.deportes').style.display = 'grid';
+      document.querySelector('.marcas').style.display = 'none';
+      document.querySelector('.colecciones').style.display = 'none';
+      document.querySelector('.noticias').style.display = 'none';
+    }
+    function marcas() {
+      document.querySelector('.hombre').style.display = 'none';
+      document.querySelector('.mujer').style.display = 'none';
+      document.querySelector('.ninos').style.display = 'none';
+      document.querySelector('.deportes').style.display = 'none';
+      document.querySelector('.marcas').style.display = 'grid';
+      document.querySelector('.colecciones').style.display = 'none';
+      document.querySelector('.noticias').style.display = 'none';
+    }
+    function colecciones() {
+      document.querySelector('.hombre').style.display = 'none';
+      document.querySelector('.mujer').style.display = 'none';
+      document.querySelector('.ninos').style.display = 'none';
+      document.querySelector('.deportes').style.display = 'none';
+      document.querySelector('.marcas').style.display = 'none';
+      document.querySelector('.colecciones').style.display = 'grid';
+      document.querySelector('.noticias').style.display = 'none';
+    }
+    function noticias() {
+      document.querySelector('.hombre').style.display = 'none';
+      document.querySelector('.mujer').style.display = 'none';
+      document.querySelector('.ninos').style.display = 'none';
+      document.querySelector('.deportes').style.display = 'none';
+      document.querySelector('.marcas').style.display = 'none';
+      document.querySelector('.colecciones').style.display = 'none';
+      document.querySelector('.noticias').style.display = 'grid';
+    }
+  </script>
+  <style>
+    @font-face {
+      font-family: adidas;
+      src: url(fuentes/adidas.ttf);
+    }
+
+    @font-face {
+      font-family: avenir;
+      src: url(fuentes/avenir.otf);
+    }
+
+    @font-face {
+      font-family: avenir-black;
+      src: url(fuentes/avenir-black.otf);
+
+    }
+
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .contenedor {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 300px 40px 1fr 120px 60px;
+      background-color: white;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .header {
+      display: grid;
+      grid-template-columns: 981px 250px;
+      grid-template-rows: 100%;
+      background-color: white;
+      align-items: center;
+      justify-items: center;
+    }
+
+    .logo img {
+      width: 250px;
+    }
+
+    .nav {
+      display: flex;
+      width: 100%;
+      max-width: 1231px;
+      border-radius: 20px;
+      height: 40px;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: black;
+      color: white;
+      font-size: 1.5em;
+      line-height: 0;
+      font-family: adidas;
+      margin-top: 40px;
+    }
+
+    .nav p:hover {
+      user-select: none;
+      cursor: pointer;
+      color: #faff02;
+      font-size: 140%;
+      transition: 0.3s;
+    }
+
+    .nav p:active {
+      letter-spacing: 5px;
+    }
+
+    .article strong {
+      font-family: avenir-black;
+    }
+
+    .article>div:not(:last-child) {
+      display: none;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-row-gap: 20px;
+      grid-column-gap: 20px;
+      font-family: avenir;
+      font-size: 22px;
+      align-items: center;
+      justify-items: center;
+      margin-top: 40px;
+    }
+
+    .noticias {
+      display: grid;
+      grid-template-columns: 318.983px 615.5px;
+      grid-template-rows: repeat(3, 300px);
+      grid-gap: 20px 20px;
+      font-family: avenir;
+      font-size: 22px;
+      margin-top: 40px;
+    }
+
+    .article img {
+      display: block;
+      width: 300px;
+      height: 300px;
+      border-right: 20px solid #faff02;
+      transition: 1s;
+      border-radius: 100px 400px 0px 80px;
+    }
+
+    .article img:hover{
+      transition: 1s;
+      border-radius: 20px 20px 20px 20px;
+    }
+
+    .descuento {
+      display: flex;
+      max-width: 1231px;
+      width: 100%;
+      border-radius: 20px;
+      height: 80px;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: #faff02;
+      color: black;
+      font-size: 1.5em;
+      font-family: adidas;
+      margin: 20px 20px;
+    }
+
+    .footer {
+      font-family: avenir;
+      font-size: 18px;
+      letter-spacing: 2px;
+      color: white;
+      display: block;
+      max-width: 1231px;
+      width: 100%;
+      background-color: black;
+      text-align: center;
+      border-radius: 20px 20px 0px 0px;
+    }
+
+    .footer strong {
+      font-family: avenir-black;
+    }
+
+    @media screen and (max-width:524px) {
+      .nav>p {
+        margin: 0px 20px 0px 20px;
+      }
+      .nav {
+        margin-top: 100px;
+        height: 120px;
+      }
+      .article {
+        margin-top: 80px;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .article>div:not(:last-child) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+      }
+    }
+
+
+    @media screen and (min-width:524px) and (max-width:805px) {
+      .nav {
+        margin-top: 80px;
+        height: 80px;
+      }
+      .article {
+        margin-top: 40px;
+      }
+      .nav>p {
+        margin: 0px 10px 0px 10px;
+      }
+    }
+
+    @media screen and (max-width:805px) {
+      .nav p:active {
+        letter-spacing: 0px;
+      }
+      .nav {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media screen and (min-width:805px) and (max-width:945px) {
+      .nav>p {
+        margin: 0px;
+      }
+    }
+
+    @media screen and (min-width: 700px) and (max-width:1030px) {
+      .article>div:not(:last-child) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+      }
+    }
+
+    @media screen and (max-width:1030px) {
+      .header {
+        grid-template-columns: 100%;
+      }
+      .logo {
+        display: block;
+        transform: scale(1.6);
+      }
+      .banner {
+        display: none;
+      }
+      .noticias{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      grid-gap: 0px 0px;
+      align-items: center;
+      justify-items: center;
+      margin-left: 20px;
+      margin-right: 20px;
+      }
+    }
+
+    @media screen and (min-width:1030px) and (max-width:1231px) {
+      .header {
+        grid-template-columns: 981px;
+      }
+      .logo {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="contenedor">
+    <div class="header">
+      <div class="banner">
+        <img src="imagenes/index/banner.png" alt="banner">
+      </div>
+      <div class="logo">
+        <img src="imagenes/index/adidas.png" alt="logo">
+      </div>
+    </div>
+
+    <div class="nav">
+      <p onclick="noticias()">NOTICIAS</p>
+      <p onclick="hombre()">HOMBRE</p>
+      <p onclick="mujer()">MUJER</p>
+      <p onclick="ninos()">NIÑOS</p>
+      <p onclick="deportes()">DEPORTES</p>
+      <p onclick="marcas()">MARCAS</p>
+      <p onclick="colecciones()">COLECCIONES</p>
+    </div>
+
+    
+
+    <div class="article">
+      <div class="hombre">
+        <div class="hijoHombre"><img src="imagenes/hombre/hombre1.webp" alt="hombre1"></div>
+        <div class="hijoHombre"><img src="imagenes/hombre/hombre2.webp" alt="hombre2"></div>
+        <div class="hijoHombre"><img src="imagenes/hombre/hombre3.webp" alt="hombre3"></div>
+        <div class="hijoHombre"><img src="imagenes/hombre/hombre4.webp" alt="hombre4"></div>
+        <div class="hijoHombre"><img src="imagenes/hombre/hombre5.webp" alt="hombre5"></div>
+        <div class="hijoHombre"><img src="imagenes/hombre/hombre6.webp" alt="hombre6"></div>
+        <div class="hijoHombre"><img src="imagenes/hombre/hombre7.webp" alt="hombre7"></div>
+        <div class="hijoHombre"><img src="imagenes/hombre/hombre8.webp" alt="hombre8"></div>
+        <div class="hijoHombre"><img src="imagenes/hombre/hombre9.jpg" alt="hombre9"></div>
+      </div>
+
+      <div class="mujer">
+        <div class="hijoMujer"><img src="imagenes/mujer/mujer1.webp" alt="mujer1"></div>
+        <div class="hijoMujer"><img src="imagenes/mujer/mujer2.webp" alt="mujer2"></div>
+        <div class="hijoMujer"><img src="imagenes/mujer/mujer3.jpg" alt="mujer3"></div>
+        <div class="hijoMujer"><img src="imagenes/mujer/mujer4.jpg" alt="mujer4"></div>
+        <div class="hijoMujer"><img src="imagenes/mujer/mujer5.jpg" alt="mujer5"></div>
+        <div class="hijoMujer"><img src="imagenes/mujer/mujer6.webp" alt="mujer6"></div>
+        <div class="hijoMujer"><img src="imagenes/mujer/mujer7.webp" alt="mujer7"></div>
+        <div class="hijoMujer"><img src="imagenes/mujer/mujer8.webp" alt="mujer8"></div>
+        <div class="hijoMujer"><img src="imagenes/mujer/mujer9.webp" alt="mujer9"></div>
+      </div>
+
+      <div class="ninos">
+        <div class="hijoNinos"><img src="imagenes/ninos/ninos1.webp" alt="ninos1"></div>
+        <div class="hijoNinos"><img src="imagenes/ninos/ninos2.webp" alt="ninos2"></div>
+        <div class="hijoNinos"><img src="imagenes/ninos/ninos3.webp" alt="ninos3"></div>
+        <div class="hijoNinos"><img src="imagenes/ninos/ninos4.webp" alt="ninos4"></div>
+        <div class="hijoNinos"><img src="imagenes/ninos/ninos5.webp" alt="ninos5"></div>
+        <div class="hijoNinos"><img src="imagenes/ninos/ninos6.webp" alt="ninos6"></div>
+        <div class="hijoNinos"><img src="imagenes/ninos/ninos7.webp" alt="ninos7"></div>
+        <div class="hijoNinos"><img src="imagenes/ninos/ninos8.webp" alt="ninos8"></div>
+        <div class="hijoNinos"><img src="imagenes/ninos/ninos9.webp" alt="ninos9"></div>
+      </div>
+
+      <div class="deportes">
+        <div class="hijoDeportes"><img src="imagenes/deportes/deportes1.jpg" alt="deportes1"></div>
+        <div class="hijoDeportes"><img src="imagenes/deportes/deportes2.webp" alt="deportes2"></div>
+        <div class="hijoDeportes"><img src="imagenes/deportes/deportes3.jpg" alt="deportes3"></div>
+        <div class="hijoDeportes"><img src="imagenes/deportes/deportes4.jpg" alt="deportes4"></div>
+        <div class="hijoDeportes"><img src="imagenes/deportes/deportes5.jpg" alt="deportes5"></div>
+        <div class="hijoDeportes"><img src="imagenes/deportes/deportes6.webp" alt="deportes6"></div>
+        <div class="hijoDeportes"><img src="imagenes/deportes/deportes7.webp" alt="deportes7"></div>
+        <div class="hijoDeportes"><img src="imagenes/deportes/deportes8.webp" alt="deportes8"></div>
+        <div class="hijoDeportes"><img src="imagenes/deportes/deportes9.webp" alt="deportes9"></div>
+      </div>
+
+      <div class="marcas">
+        <div class="hijoMarcas"><img src="imagenes/marcas/marcas1.webp" alt="marcas1"></div>
+        <div class="hijoMarcas"><img src="imagenes/marcas/marcas2.webp" alt="marcas2"></div>
+        <div class="hijoMarcas"><img src="imagenes/marcas/marcas3.webp" alt="marcas3"></div>
+        <div class="hijoMarcas"><img src="imagenes/marcas/marcas4.webp" alt="marcas4"></div>
+        <div class="hijoMarcas"><img src="imagenes/marcas/marcas5.webp" alt="marcas5"></div>
+        <div class="hijoMarcas"><img src="imagenes/marcas/marcas6.webp" alt="marcas6"></div>
+        <div class="hijoMarcas"><img src="imagenes/marcas/marcas7.webp" alt="marcas7"></div>
+        <div class="hijoMarcas"><img src="imagenes/marcas/marcas8.webp" alt="marcas8"></div>
+        <div class="hijoMarcas"><img src="imagenes/marcas/marcas9.webp" alt="marcas9"></div>
+      </div>
+
+      <div class="colecciones">
+        <div class="hijoColecciones"><img src="imagenes/colecciones/colecciones1.webp" alt="colecciones1"></div>
+        <div class="hijoColecciones"><img src="imagenes/colecciones/colecciones2.jpg" alt="colecciones2"></div>
+        <div class="hijoColecciones"><img src="imagenes/colecciones/colecciones3.webp" alt="colecciones3"></div>
+        <div class="hijoColecciones"><img src="imagenes/colecciones/colecciones4.webp" alt="colecciones4"></div>
+        <div class="hijoColecciones"><img src="imagenes/colecciones/colecciones5.webp" alt="colecciones5"></div>
+        <div class="hijoColecciones"><img src="imagenes/colecciones/colecciones6.webp" alt="colecciones6"></div>
+        <div class="hijoColecciones"><img src="imagenes/colecciones/colecciones7.webp" alt="colecciones7"></div>
+        <div class="hijoColecciones"><img src="imagenes/colecciones/colecciones8.webp" alt="colecciones8"></div>
+        <div class="hijoColecciones"><img src="imagenes/colecciones/colecciones9.webp" alt="colecciones9"></div>
+      </div>
+
+      <div class="noticias">
+        <div class="hijo foto_noticia_1">
+          <img src="imagenes/noticias/noticia1.jpg" alt="imagen noticia 1">
+        </div>
+        <div class="hijo noticia_1">
+          <label>
+            <strong>Instapump Fury Boost</strong> reunen “Las nuevas <em>The best of both worlds</em>“,
+            así en plan <strong>Hanna Montana</strong> aka Miley Cyrus. Pero no estamos aquí para hablar
+            de música. A lo que me refiero con <strong>el diseño</strong> de un modelo tan mítico como el Instapump Fury
+            de
+            <strong>la tecnología</strong>
+            es a la fusión entre <strong>Reebok</strong> con Boost de <strong>adidas</strong>. Esta declaración de
+            intenciones en forma de
+            <strong>sneaker</strong> que nos presenta ha sido un referente en estética mundial.<strong>Reebok y adidas
+            </strong>va a romper
+            todas las expectativas de los sneakerheads más exigentes. Desde que se creó en 1994, el modelo
+            <strong>Instapump
+              Fury</strong>.
+          </label>
+        </div>
+        <div class="hijo foto_noticia_2">
+          <img src="imagenes/noticias/noticia2.png" alt="imagen noticia 1">
+        </div>
+        <div class="hijo noticia_2"><label>
+            Nuestras intenciones con nuestras <strong>Adidas Originals Dragon Ball Z</strong> es lanzar modelos de par
+            en par y así, rememorar las batallas más feroces y populares que han marcado este histórico anime
+            japonés. Por ello, Adidas también prepara el lanzamiento de zapatillas inspiradas en personajes
+            como los guerreros <strong>Vegeta y Gohan, hijo de Son Goku, y los antagonistas Cell y el Monstruo
+              Buu</strong>.
+            Además, está previsto que salgan a la luz un par de prototipos de calzado basados en el <strong>Dragón
+              Shenron de la saga Dragon Ball Z y su versión Super</strong>, de la serie Dragon Ball Super, unos
+            personajes
+            divinos capaces de hacer realidad cualquier deseo.
+          </label></div>
+        <div class="hijo foto_noticia_3">
+          <img src="imagenes/noticias/noticia3.png" alt="imagen noticia 1">
+        </div>
+        <div class="hijo noticia_3"><label>
+            <strong>Adidas Stan Smith</strong>, las zapatillas blancas que han sido capaces
+            de seducir desde pijos a modernos, pasando por el tenista al que deben su nombre
+            Nacieron en 1964 y no siempre se llamaron adidas Stan Smith.
+            Stan Smith fue el tenista número 1 del mundo en los años 70 y el responsable de dar nombre al modelo más
+            icónico de adidas.
+            Esta es la historia de unas zapatillas que siempre están de moda.
+          </label></div>
+      </div>
+
+    </div>
+
+    <div class="descuento">
+      <p>DESCUENTO DEL 15%</p>
+    </div>
+
+    <div class="footer">
+      <p>Diseñado por <strong>Emmanuel Gonzalez</strong> | Desarrollado con <strong>Visual Studio Code</strong> con
+        <strong>HTML 5 </strong>&<strong> CSS 3</strong></p>
+    </div>
+
+  </div>
+</body>
+
+</html>

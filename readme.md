@@ -29,7 +29,7 @@ It was an exercise to practice **GRID** from **CSS** using the basics to paint a
 ## **Technologies**
 
 * **Html**
-* **Css**
+* **Css**&nbsp;&nbsp;*(Grid)*
 * **JavaScript**&nbsp;&nbsp;*(Just a little)*
 
 ## **Setup**

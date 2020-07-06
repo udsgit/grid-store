@@ -7,6 +7,7 @@ Web Application that simulates being the portal of an Adidas Store 🛍️
 - [**Grid Store**](#grid-store)
   - [**Table of contents**](#table-of-contents)
   - [**General info**](#general-info)
+  - [**Demo**](#demo)
   - [**Screenshots**](#screenshots)
   - [**Technologies**](#technologies)
   - [**Setup**](#setup)
@@ -17,20 +18,25 @@ Web Application that simulates being the portal of an Adidas Store 🛍️
 ## **General info**
 
 **Date**: October, 2019  
-**Duration**: 2 Days.  
+**Duration**: 2 Days.
 
 It was an exercise to practice **GRID** from **CSS** using the basics to paint a responsive design website without external libraries. I have used to practice **CSS**.
 
+## **Demo**
+
+You can try it using the [Demo](https://udsgit.github.io/grid-store).
+
+> <img src="imagenes/readme/demo.gif"/><br><i>Demo</i>
+
 ## **Screenshots**
 
-> ![Screenshot](imagenes/readme/example.png)
-> *Website example.*
+> <img src="imagenes/readme/example.png" height="150"/><br><i>Home</i>
 
 ## **Technologies**
 
-* **Html**
-* **Css**&nbsp;&nbsp;*(Grid)*
-* **JavaScript**&nbsp;&nbsp;*(Just a little)*
+- **Html**
+- **Css**&nbsp;&nbsp;_(Grid)_
+- **JavaScript**&nbsp;&nbsp;_(Just a little)_
 
 ## **Setup**
 
@@ -47,7 +53,7 @@ git clone https://github.com/udsgit/grid-store.git
 
 ## **Status**
 
-Project is: ***Completed.***
+Project is: **_Completed._**
 
 Because the functionality was to practice with **Grid**.
 
